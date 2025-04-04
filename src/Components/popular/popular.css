@@ -1,0 +1,13 @@
+.popular-header{
+    position: relative;
+}
+.popular-header::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background-color: black;
+    width: 20%;
+}

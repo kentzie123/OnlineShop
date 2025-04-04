@@ -1,0 +1,22 @@
+.card{
+    transition: transform 0.2s;
+    cursor: pointer;
+    width: 20%;
+    flex-shrink: 0;
+}
+.card:hover{
+    transform: scale(1.01);
+}
+
+@media screen and (max-width: 768px){
+    .card{
+       width: 45%;
+    }
+    
+}
+
+@media screen and (max-width: 321px){
+    .card{
+        width: 45%;
+    }
+}

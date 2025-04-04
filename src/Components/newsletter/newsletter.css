@@ -1,0 +1,10 @@
+.news-container{
+    width: 85%;
+    background: linear-gradient(180deg,#fde1ff,#e1ffea22 60%);
+}
+
+@media screen and (max-width: 768px){
+    .news-container{
+        width: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+.cartData{
+    height: 65px;
+    line-height: 65px;
+}
+@media (max-width: 768px) {
+    .cart-container{
+        overflow-x: scroll !important;
+    }
+}

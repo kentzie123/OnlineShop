@@ -1,0 +1,37 @@
+.singup-container{
+    background: linear-gradient(180deg,#fde1ff,#e1ffea22 60%);
+}
+
+
+.signup-form{
+    width: 35%;
+    max-width: 430px;
+}
+
+@media screen and (max-width: 1180px){
+    .signup-form{
+        width: 45%;
+    }
+    
+}
+
+@media screen and (max-width: 810px){
+    .signup-form{
+        width: 55%;
+    }
+    
+}
+
+@media screen and (max-width: 578px){
+    .signup-form{
+        width: 75%;
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+    .signup-form{
+        width: 100%;
+    }
+    
+}
