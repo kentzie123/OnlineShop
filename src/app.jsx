@@ -1,13 +1,13 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar.jsx';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Shop from './Pages/Shop';
-import ShopCategory from './Pages/ShopCategory';
-import Product from './Pages/Product';
-import Cart from './Pages/Cart';
-import Login from './Pages/Login';
+import Shop from './Pages/Shop.jsx';
+import ShopCategory from './Pages/ShopCategory.jsx';
+import Product from './Pages/Product.jsx';
+import Cart from './Pages/Cart.jsx';
+import Login from './Pages/Login.jsx';
 import Footer from './Components/Footer/Footer.jsx';
-import SignUp from './Pages/SignUp';
+import SignUp from './Pages/SignUp.jsx';
 
 
 import men_banner from '/Assets/banner_mens.png';
