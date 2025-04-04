@@ -1,6 +1,6 @@
 import './Item.css';
 import { Link } from 'react-router-dom';
-import { useGlobalContext } from '../../Context/ShopContext';
+import { useGlobalContext } from '../../Context/shopcontext';
 
 function Item({ id, name, category, image, new_price, old_price }) {
   const {setMenu} = useGlobalContext();

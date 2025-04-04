@@ -3,7 +3,7 @@ import logo from '../../../public/Assets/logo.png';
 import cart_icon from '../../../public/Assets/cart_icon.png';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import { useGlobalContext } from '../../Context/ShopContext';
+import { useGlobalContext } from '../../Context/shopcontext';
 
 const Navbar = () => {
     

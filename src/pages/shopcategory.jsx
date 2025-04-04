@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import './CSS/ShopCategory.css';
-import { useGlobalContext } from '../Context/ShopContext';
+import { useGlobalContext } from '../Context/shopcontext';
 import Item from '../Components/Item/Item';
 
 

@@ -3,7 +3,7 @@ import './ProductDisplay.css';
 import start_icon from '../../../public/Assets/star_icon.png';
 import start_empty from '../../../public/Assets/star_dull_icon.png';
 import product_ratings from '../../Data/product_ratings';
-import { useGlobalContext } from '../../Context/ShopContext';
+import { useGlobalContext } from '../../Context/shopcontext';
 import Description from '../DescriptionBox/Description';
 import CartNotification from '../CartNotification/CartNotification';
 

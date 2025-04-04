@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../Context/ShopContext";
+import { useGlobalContext } from "../Context/shopcontext";
 import "./CSS/Cart.css";
 
 const Cart = () => {

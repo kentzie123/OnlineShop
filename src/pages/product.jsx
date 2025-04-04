@@ -1,4 +1,4 @@
-import { useGlobalContext } from '../Context/ShopContext'
+import { useGlobalContext } from '../Context/shopcontext'
 import { useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
