@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import './ProductDisplay.css';
-import start_icon from '../../../public/Assets/star_icon.png';
-import start_empty from '../../../public/Assets/star_dull_icon.png';
 import product_ratings from '../../Data/product_ratings';
 import { useGlobalContext } from '../../Context/shopcontext';
 import Description from '../DescriptionBox/Description';
@@ -75,7 +73,7 @@ const ProductDisplay = (props) => {
                         <div className='d-flex'>
                             <div>
                                 {[1, 2, 3, 4, 5].map((num) => (
-                                    <img key={num} src={avgRating >= num ? start_icon : start_empty} alt="star" />
+                                    <img key={num} src={avgRating >= num ? "/Assets/star_icon.png" : "/Assets/star_dull_icon.png"} alt="star" />
                                 ))}
                             </div>
                             <p className='ms-2'>({filteredProductRating.length === 0 ? "No reviews yet" : filteredProductRating.length})</p>

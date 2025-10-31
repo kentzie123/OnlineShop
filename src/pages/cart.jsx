@@ -1,13 +1,18 @@
 import { useGlobalContext } from "../Context/shopcontext";
 import "./CSS/Cart.css";
 
+
+
 const Cart = () => {
   const { cart, setCart } = useGlobalContext();
 
   function removeToCart(productToRemove) {
     const filteredCart = cart.filter(
       (product) =>
-        !(product.id === productToRemove.id && product.size === productToRemove.size)
+        !(
+          product.id === productToRemove.id &&
+          product.size === productToRemove.size
+        )
     );
     setCart(filteredCart);
   }
@@ -17,7 +22,7 @@ const Cart = () => {
       if (id === item.id) {
         return { ...item, quantity: item.quantity + 1 };
       }
-      return item; 
+      return item;
     });
     setCart(updatedCart);
   }
@@ -25,12 +30,14 @@ const Cart = () => {
   function handleSubtractQuantity(id) {
     const updatedCart = cart.map((item) => {
       if (id === item.id) {
-        return { ...item, quantity: item.quantity > 1 ? item.quantity - 1 : 1 }; 
+        return { ...item, quantity: item.quantity > 1 ? item.quantity - 1 : 1 };
       }
       return item;
     });
     setCart(updatedCart);
   }
+
+  
 
   return (
     <section className="py-4">
@@ -83,9 +90,14 @@ const Cart = () => {
                     </button>
                   </div>
                 </td>
-                <td className="cartData">${(product.new_price * product.quantity).toFixed(2)}</td>
                 <td className="cartData">
-                  <button onClick={() => removeToCart(product)} className="btn btn-close"></button>
+                  ${(product.new_price * product.quantity).toFixed(2)}
+                </td>
+                <td className="cartData">
+                  <button
+                    onClick={() => removeToCart(product)}
+                    className="btn btn-close"
+                  ></button>
                 </td>
               </tr>
             ))}
@@ -99,7 +111,13 @@ const Cart = () => {
           <div className="col-6">
             <div>
               <div className="d-flex justify-content-between">
-                <span>Subtotal</span>${cart.reduce((acc, item) => acc + item.new_price * item.quantity, 0).toFixed(2)}
+                <span>Subtotal</span>$
+                {cart
+                  .reduce(
+                    (acc, item) => acc + item.new_price * item.quantity,
+                    0
+                  )
+                  .toFixed(2)}
               </div>
               <hr className="border-2 border-dark-subtle bord" />
             </div>
@@ -111,16 +129,29 @@ const Cart = () => {
             </div>
             <div>
               <div className="d-flex justify-content-between">
-                <span className="fw-bold">Total</span>${cart.reduce((acc, item) => acc + item.new_price * item.quantity, 0).toFixed(2)}
+                <span className="fw-bold">Total</span>$
+                {cart
+                  .reduce(
+                    (acc, item) => acc + item.new_price * item.quantity,
+                    0
+                  )
+                  .toFixed(2)}
               </div>
-              <hr className="border-2 border-dark-subtle bord" />
             </div>
+
+            <button type="button" className="btn btn-danger mt-5">
+              PROCEED TO CHECKOUT
+            </button>
           </div>
 
           <div className="col-5">
             <p>If you have a promo code, enter it here</p>
             <div className="d-flex" style={{ height: "50px" }}>
-              <input className="form-control rounded-0" type="text" placeholder="Enter Promo Code" />
+              <input
+                className="form-control rounded-0"
+                type="text"
+                placeholder="Enter Promo Code"
+              />
               <button className="btn btn-dark rounded-0">Submit</button>
             </div>
           </div>

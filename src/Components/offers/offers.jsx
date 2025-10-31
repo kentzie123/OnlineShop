@@ -1,5 +1,4 @@
 import './Offers.css';
-import exclusi_image from '../../../public/Assets/exclusive_image.png';
 
 const Offers = () => {
   return (
@@ -11,7 +10,7 @@ const Offers = () => {
                 <p className='fw-semibold'>ONLY ON BEST SELLERS PRODUCTS</p>
                 <button className='btn btn-danger rounded-pill' style={{width:"150px", height:"50px"}}>Check Now</button>
             </div>
-            <img className='img-fluid' src={exclusi_image} alt="exclusive_image" />
+            <img className='img-fluid' src="/Assets/exclusive_image.png" alt="exclusive_image" />
         </div>
     </section>
   )
